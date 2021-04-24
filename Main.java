@@ -1,18 +1,15 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class Main {
-
+public class Main 
+{
 	public static void main(String[] args) 
 	{
 		int guessesLeft = 5;
 		Random random = new Random();
 		int randomNumber = (random.nextInt(100+1));
 		boolean gameWon = false;
-		
 		Scanner scanner = new Scanner(System.in);
-
-		//System.out.println(randomNumber);
 		
 		//Keeps prompting you to guess the number while you have guesses left
 		while (guessesLeft > 0 && gameWon == false)
@@ -40,12 +37,10 @@ public class Main {
 				gameWon = true;
 			}
 		}
-		
 		if (gameWon == false)
 		{
 			System.out.println("You lose!");
 			System.out.println("The number to guess was: " + randomNumber);
 		}
 	}
-	
 }
